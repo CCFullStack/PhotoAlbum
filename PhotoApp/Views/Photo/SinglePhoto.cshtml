@@ -1,0 +1,10 @@
+﻿@model IEnumerable<PhotoApp.Models.Photo>
+@{
+    ViewBag.Title = "SinglePhoto";
+}
+
+<h2>SinglePhoto</h2>
+
+@foreach (var photo in Model) {
+    <img src="@photo.Url" alt="@photo.Title"/>
+}

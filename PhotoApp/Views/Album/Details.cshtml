@@ -1,0 +1,11 @@
+﻿@model PhotoApp.Models.Album
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@Model.Title</h2>
+@Html.RouteLink("UploadPhoto", "UploadPhoto", new { albumName = Model.Title })
+
+@foreach (var photo in Model.Photos) {
+    <img src="/@photo.Url" alt="@photo.Title" style="width:300px;"/>
+}
